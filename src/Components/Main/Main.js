@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import "../../styles/Main.css";
 import userjpg from "../../images/user.jpg";
 import element1 from "../../images/element1.jpg";
-// import teamjpg from "./team.jpg";
+import team from "../../images/team.jpg";
+import employer from "../../images/employer.jpg";
+import carrier from "../../images/carrier.jpg";
 import uslugi from "../../images/usługi.jpg";
 import { NavLink } from "react-router-dom";
 
@@ -15,6 +17,7 @@ class Main extends Component {
           <h1>Usługi</h1>
           <div className="underline"></div>
           <div className="grid-cols-2">
+          <NavLink to="/weOrder">
             <div href="/" className="commission-btn">
               <div className="single-card-image">
                 <div className="img">
@@ -25,13 +28,12 @@ class Main extends Component {
                     <strong>Zleć transport</strong>
                     <br />
                   </p>
-                  <button className="button">
-                    <NavLink to="/weOrder">Przejdź dalej</NavLink>
-                  </button>
+                  <button className="button">Przejdź dalej</button>
                 </div>
               </div>
             </div>
-
+          </NavLink>
+          <NavLink to="/lookFor">
             <div href="/" className="lookfor-btn">
               <div className="single-card-image">
                 <div className="img">
@@ -42,314 +44,67 @@ class Main extends Component {
                     <strong>Znajdź transport</strong>
                     <br />
                   </p>
-                  <button className="button">
-                    <NavLink to="/lookFor">Przejdź dalej</NavLink>
-                  </button>
+                  <button className="button">Przejdź dalej</button>
                 </div>
               </div>
             </div>
+          </NavLink>
           </div>
-        </div>
-        <div className="announcements">
-          <h1>Najnowsze ogłoszenia</h1>
-          <div className="underline"></div>
-          <table className="orders-table">
-            <thead>
-              <tr>
-                <th width="30px">
-                  <h3>Zdjęcie</h3>
-                </th>
-                <th>
-                  <h3>Ładunek</h3>
-                </th>
-                <th>
-                  <h3>Skąd</h3>
-                </th>
-                <th>
-                  <h3>Dokąd</h3>
-                </th>
-                <th>
-                  <h3>Cena</h3>
-                </th>
-                <th>
-                  <h3>Ciężar</h3>
-                </th>
-                <th>
-                  <h3>Wymiary</h3>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <img
-                    src="https://wyslijbusem.pl/assets/img/no-photo.jpg"
-                    alt="logo"
-                    width="80px"
-                    height="80px"
-                  ></img>
-                </td>
-                <td>Bmw e46</td>
-                <td>Rzeszów</td>
-                <td>Warszawa</td>
-                <td>400zł</td>
-                <td>2349kg</td>
-                <td>
-                  Dł. 447cm
-                  <br />
-                  Wys. 140cm <br /> Szer. 170cm
-                </td>
-                <td>
-                  <button id="1">WYBIERZ</button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    src="https://wyslijbusem.pl/assets/img/no-photo.jpg"
-                    alt="logo"
-                    width="80px"
-                    height="80px"
-                  ></img>
-                </td>
-                <td>Bmw e46</td>
-                <td>Rzeszów</td>
-                <td>Warszawa</td>
-                <td>400zł</td>
-                <td>2349kg</td>
-                <td>
-                  Dł. 447cm
-                  <br />
-                  Wys. 140cm <br /> Szer. 170cm
-                </td>
-                <td>
-                  <button id="2">WYBIERZ</button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    src="https://wyslijbusem.pl/assets/img/no-photo.jpg"
-                    alt="logo"
-                    width="80px"
-                    height="80px"
-                  ></img>
-                </td>
-                <td>Bmw e46</td>
-                <td>Rzeszów</td>
-                <td>Warszawa</td>
-                <td>400zł</td>
-                <td>2349kg</td>
-                <td>
-                  Dł. 447cm
-                  <br />
-                  Wys. 140cm <br /> Szer. 170cm
-                </td>
-                <td>
-                  <button id="3">WYBIERZ</button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    src="https://wyslijbusem.pl/assets/img/no-photo.jpg"
-                    alt="logo"
-                    width="80px"
-                    height="80px"
-                  ></img>
-                </td>
-                <td>Bmw e46</td>
-                <td>Rzeszów</td>
-                <td>Warszawa</td>
-                <td>400zł</td>
-                <td>2349kg</td>
-                <td>
-                  Dł. 447cm
-                  <br />
-                  Wys. 140cm <br /> Szer. 170cm
-                </td>
-                <td>
-                  <button id="4">WYBIERZ</button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    src="https://wyslijbusem.pl/assets/img/no-photo.jpg"
-                    alt="logo"
-                    width="80px"
-                    height="80px"
-                  ></img>
-                </td>
-                <td>Bmw e46</td>
-                <td>Rzeszów</td>
-                <td>Warszawa</td>
-                <td>400zł</td>
-                <td>2349kg</td>
-                <td>
-                  Dł. 447cm
-                  <br />
-                  Wys. 140cm <br /> Szer. 170cm
-                </td>
-                <td>
-                  <button id="5">WYBIERZ</button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    src="https://wyslijbusem.pl/assets/img/no-photo.jpg"
-                    alt="logo"
-                    width="80px"
-                    height="80px"
-                  ></img>
-                </td>
-                <td>Bmw e46</td>
-                <td>Rzeszów</td>
-                <td>Warszawa</td>
-                <td>400zł</td>
-                <td>2349kg</td>
-                <td>
-                  Dł. 447cm
-                  <br />
-                  Wys. 140cm <br /> Szer. 170cm
-                </td>
-                <td>
-                  <button id="6">WYBIERZ</button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
         </div>
 
         <div className="info">
           <div className="about-us" id="about-us">
-            <h1>O nas</h1>
-            <div className="underline"></div>
-            <div className="description">
-              <p>
-                Clicktrans to serwis łączący osoby i firmy poszukujące
-                transportu dużych przesyłek z przewoźnikami. Jesteśmy giełdą
-                transportową działającą na rynku od ponad 15 lat.
-              </p>
+            <div className="info-size">
+              <div className="infoleftside">
+                <h2>O nas</h2>
+                  <p>
+                  Clicktrans to serwis łączący osoby i firmy poszukujące
+                  transportu dużych przesyłek z przewoźnikami. Jesteśmy giełdą
+                  transportową działającą na rynku od ponad 15 lat.
+                  </p>
+                  <button className="button">Zobacz więcej</button>
+              </div>
+              <div className="inforightside">
+              <img src={team} alt="element1" width="600px" height="400px"></img>
+              </div>
             </div>
           </div>
+
           <div className="employer" id="employer">
-            <h1>Dla zleceniodawcy</h1>
-            <div className="underline"></div>
-            <p>
-              Biorąc udział w giełdzie transportowej jako zleceniodawca może być
-              korzystne dla Twojej firmy, ponieważ umożliwia ona szybkie i łatwe
-              porównanie ofert różnych przewoźników i wybór najlepszej opcji dla
-              Twojego ładunku.Przede wszystkim, ważne jest, aby dokładnie
-              określić wymagania dotyczące transportu i udostępnić te informacje
-              na giełdzie. Im więcej informacji udostępnisz, tym więcej ofert
-              otrzymasz i tym łatwiej będzie Ci dokonać wyboru. Warto wspomnieć
-              o wymaganiach dotyczących terminu, miejsca, wielkości ładunku i
-              wymaganej obsługi.Kolejnym ważnym krokiem jest monitorowanie ofert
-              przewoźników i szybka reakcja na te, które odpowiadają Twoim
-              wymaganiom. Platformy giełdowe często udostępniają narzędzia,
-              takie jak automatyczne powiadomienia o nowych ofertach, co
-              umożliwia Ci łatwe i szybkie zarządzanie zleceniami.Dobrą praktyką
-              jest również przeglądanie opinii i recenzji przewoźników, aby
-              upewnić się, że wybrany przewoźnik jest rzetelny i posiada dobrą
-              reputację. Kontakt i komunikacja z przewoźnikiem przed i w trakcie
-              transportu również jest ważny, aby upewnić się, że wszystko
-              przebiega bezproblemowo.Wreszcie, po zakończeniu transportu ważne
-              jest, aby ocenić jakość usług i opublikować pozytywną recenzję,
-              jeśli jest to zasłużone. To może pomóc w budowaniu pozytywnej
-              reputacji i przyciągnięciu więcej ofert w
-              przyszłości.Podsumowując, biorąc udział w giełdzie transportowej
-              jako zleceniodawca wymaga dokładnego planowania, uważnego
-              monitorowania i szybkiej reakcji, ale jeśli jest to dobrze
-              zarządzane, może być korzystne i oszczędne dla Twojej firmy. Z
-              giełdy transportowej można korzystać jako regularne rozwiązanie do
-              zarządzania transportem, ponieważ dostarcza ona wielu opcji i
-              umożliwia porównanie cen i usług.Oprócz oszczędności finansowych,
-              giełdy transportowe również pozwalają na optymalizację procesu
-              transportu, ponieważ pozwalają na szybkie i łatwe porozumiewanie
-              się z przewoźnikami i śledzenie postępu transportu w czasie
-              rzeczywistym.Warto pamiętać, że wybór odpowiedniego przewoźnika na
-              giełdzie transportowej może wpłynąć na jakość i niezawodność
-              transportu, dlatego ważne jest, aby dokładnie przestudiować
-              profile przewoźników i ich opinie, zanim zdecydujesz się na
-              wybór.Podsumowując, biorąc udział w giełdzie transportowej jako
-              zleceniodawca daje Ci kontrolę nad procesem transportu i umożliwia
-              optymalizację kosztów i jakości usług. Z uwagą i dokładnością
-              możesz w pełni wykorzystać potencjał giełdy transportowej i
-              zapewnić swojej firmie niezawodne i oszczędne rozwiązania
-              transportowe.
-            </p>
+            <div className="info-size">
+              <div className="infoleftside">
+                <h2>Dla zleceniodawcy</h2>
+                    <p>
+                      Biorąc udział w giełdzie transportowej jako zleceniodawca może być
+                      korzystne dla Twojej firmy, ponieważ umożliwia ona szybkie i łatwe
+                      porównanie ofert różnych przewoźników i wybór najlepszej opcji dla
+                      twojego ładunku.
+                    </p>
+                    <button className="button">Zobacz więcej</button>
+              </div>
+              <div className="inforightside">
+              <img
+                src={employer} alt="employer" width="600px" height="400px"></img>
+              </div>
+            </div>
           </div>
+
           <div className="carrier" id="carrier">
-            <h1>Dla przewoźnika</h1>
-            <div className="underline"></div>
-            <p>
-              Giełda transportowa to platforma internetowa, która umożliwia
-              przewoźnikom i nadawcom ładunków łatwe i efektywne planowanie i
-              organizację przemieszczenia towarów. Przewoźnicy udostępniają
-              informacje o dostępnej powierzchni ładunkowej w swoich pojazdach,
-              a nadawcy ładunków wyszukują odpowiedniego przewoźnika i rezerwują
-              powierzchnię.
-            </p>
-            <p>
-              Aby korzystać z giełdy transportowej jako przewoźnik, należy
-              zarejestrować się na platformie i udostępnić następujące
-              informacje:
-            </p>
-            <ol>
-              <li>
-                Typ i wielkość pojazdu: na giełdzie transportowej ważne jest,
-                aby przewoźnicy udostępniali informacje o rodzaju i wielkości
-                swojego pojazdu, aby nadawcy ładunków mogli wyszukać
-                odpowiedniego przewoźnika.
-              </li>
-              <li>
-                Obszar działania: przewoźnicy powinni wskazać, w jakich
-                regionach są w stanie realizować transport, aby uniknąć
-                niepotrzebnych zleceń z innych części kraju lub zagranicy.
-              </li>
-              <li>
-                Dostępność i czas podróży: przewoźnicy powinni udostępnić
-                informacje o swojej dostępności i czasie podróży, aby nadawcy
-                ładunków byli w stanie określić, czy ich terminy dostawy są
-                możliwe do zrealizowania.
-              </li>
-              <li>
-                Cena za transport: ważne jest, aby przewoźnicy udostępniali
-                aktualne i dokładne informacje na temat ceny za transport, aby
-                nadawcy ładunków mogli porównać oferty różnych przewoźników.
-              </li>
-              <li>
-                Historia i opinie: platformy giełdowe często udostępniają
-                możliwość przeglądania historii i opinii na temat przewoźników,
-                co pozwala nadawcom ładunków na wybór najlepszego dostawcy.
-              </li>
-            </ol>
-            <p>
-              Udostępnianie aktualnych i dokładnych informacji jest kluczowe dla
-              sukcesu na giełdzie transportowej. Przewoźnicy powinni również
-              regularnie aktualizować swoje profile, aby zachować wiarygodność i
-              zapewnić nadawcom ładunków najnowsze informacje.Oprócz
-              udostępniania informacji, przewoźnicy powinni również monitorować
-              oferty nadawców ładunków i szybko odpowiadać na zlecenia, aby
-              zwiększyć swoje szanse na uzyskanie zlecenia. Platformy giełdowe
-              często udostępniają narzędzia, takie jak automatyczne
-              powiadomienia o nowych zleceniach, co pomaga przewoźnikom szybko
-              reagować na zmiany.Ponadto, przewoźnicy powinni zachować dobry
-              poziom obsługi i komunikacji z nadawcami ładunków, aby zbudować
-              dobre relacje i uzyskać pozytywne recenzje. To może przyciągnąć
-              więcej zleceń i pomóc zwiększyć obroty.Oprócz korzyści dla
-              przewoźników, giełdy transportowe również pozwalają na oszczędność
-              czasu i pieniędzy dla nadawców ładunków. Platformy te umożliwiają
-              szybkie i łatwe porównanie ofert różnych przewoźników, co pozwala
-              na wybór najlepszej opcji.Podsumowując, giełdy transportowe to
-              efektywne i wygodne rozwiązanie dla przewoźników i nadawców
-              ładunków, które pozwala na szybsze i prostsze planowanie i
-              organizację transportu. Przewoźnicy powinni udostępniać aktualne i
-              dokładne informacje oraz monitorować oferty nadawców ładunków, aby
-              zwiększyć swoje szanse na uzyskanie zlecenia.
-            </p>
+            <div className="info-size">
+              <div className="infoleftside">
+                <h2>Dla przewoźnika</h2>
+                    <p>
+                      Giełda transportowa to platforma internetowa, która umożliwia
+                      przewoźnikom i nadawcom ładunków łatwe i efektywne planowanie i
+                      organizację przemieszczenia towarów
+                    </p>
+                    <button className="button">Zobacz więcej</button>
+              </div>
+              <div className="inforightside">
+              <img
+                src={carrier} alt="carrier" width="600px" height="400px"></img>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -366,14 +121,37 @@ class Main extends Component {
 
             <div className="element1rightside">
               <img
-                src={element1}
-                alt="element1"
-                width="800px"
-                height="400px"
-              ></img>
+                src={element1} alt="element1" width="600px" height="400px"></img>
             </div>
           </div>
         </div>
+
+        <div className="team">
+          <div className="teamsize">
+            <div className="teamleft">
+              <h2>Poznaj naszą drużynę</h2>
+            </div>
+            <div className="teamright">
+              <p>
+                <img src={userjpg} alt="user" width="50px" height="50px" />
+                <h6>Współzałożyciel</h6>
+                <h5>Mateusz Trojnar</h5>
+              </p>
+              <p>
+                <img src={userjpg} alt="user" width="50px" height="50px" />
+                <h6>Współzałożyciel</h6>
+                <h5>Damian Kania</h5>
+              </p>
+              <p>
+                <img src={userjpg} alt="user" width="50px" height="50px" />
+                <h6>Współzałożyciel</h6>
+                <h5>Radosław Szynal</h5>
+              </p>
+            </div>
+          </div>
+        </div>
+
+
         <div className="rating">
           <section>
             <h1>Opinie użytkowników</h1>
@@ -459,30 +237,6 @@ class Main extends Component {
           </section>
         </div>
 
-        <div className="team">
-          <div className="teamsize">
-            <div className="teamleft">
-              <h2>Poznaj naszą drużynę</h2>
-            </div>
-            <div className="teamright">
-              <p>
-                <img src={userjpg} alt="user" width="50px" height="50px" />
-                <h6>Współzałożyciel</h6>
-                <h5>Mateusz Trojnar</h5>
-              </p>
-              <p>
-                <img src={userjpg} alt="user" width="50px" height="50px" />
-                <h6>Współzałożyciel</h6>
-                <h5>Damian Kania</h5>
-              </p>
-              <p>
-                <img src={userjpg} alt="user" width="50px" height="50px" />
-                <h6>Współzałożyciel</h6>
-                <h5>Radosław Szynal</h5>
-              </p>
-            </div>
-          </div>
-        </div>
       </main>
     );
   }
