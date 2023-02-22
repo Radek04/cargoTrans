@@ -1,0 +1,12 @@
+.permits{
+    margin-top: 50px;
+}
+.permits .form-check{
+    display: inline-block;
+    padding: 0;
+    margin-left: 50px;
+    
+}
+.permits .form-switch .form-check-input{
+    margin-left: 0;
+}

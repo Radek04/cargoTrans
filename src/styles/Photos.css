@@ -1,0 +1,24 @@
+.photos{
+    margin-top: 50px;
+}
+.photo{
+   display: none;
+}
+.photos label{
+    color: white;
+    height: 60px;
+    margin-top: 25px;
+    border-radius: 5px;
+    background-color: rgb(220, 227, 238);
+    color: rgb(75, 100, 135);
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.photos span{
+    text-decoration: underline;
+    color: rgb(75, 100, 135);
+    margin-left: 5px;
+    opacity: 1;
+}

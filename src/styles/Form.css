@@ -1,0 +1,28 @@
+.form{
+    margin-left: 15px;
+}
+input{
+    border-radius: 5px;
+}
+.country{
+    height: 35px;
+    border-radius: 5px;
+    border: 0;
+}
+.form label
+{
+    padding-top: 15px;
+}
+.pl{
+    float: left;
+}
+.pl1{
+    float: right;
+}
+.date1{
+    padding: 15px;
+}
+.time
+{
+    padding:15px;
+}

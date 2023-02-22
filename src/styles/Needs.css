@@ -1,0 +1,7 @@
+.needs{
+    margin-top: 50px;
+}
+.needs div{
+    display: inline-block;
+    margin-left: 50px;
+}

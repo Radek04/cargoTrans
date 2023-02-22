@@ -1,0 +1,10 @@
+.mainOrder
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: whitesmoke;
+}
+.loadDel{
+    margin-bottom: 150px;
+}
