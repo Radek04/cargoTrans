@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "../../styles/LookFor.css";
-import truck from "../../images/truck.jpg";
 import furniture from "../../images/furniture.png";
 import otherVehicles from "../../images/otherVehicles.png";
 import box from "../../images/package.png";
@@ -13,15 +12,57 @@ import otherCargo from "../../images/otherCargo.png";
 import pallets from "../../images/pallets.png";
 import specialCare from "../../images/specialCare.png";
 import cargo from "../../images/cargo.png";
+import Tr from "./Li";
 
 class LookFor extends Component {
   state = {
-    from: "Skąd?",
-    where: "Dokąd?",
+    from: "",
+    where: "",
+    weightFrom: "min.",
+    weightTo: "max.",
 
     dateStart: new Date().toISOString().slice(0, 10),
     dateEnd: new Date().toISOString().slice(0, 10),
   };
+
+  lists = [
+    {
+      photo: "src",
+      name: "BMW X3",
+      from: "Rzeszow",
+      where: "Londyn",
+      price: "2000zł",
+      dimensions: "450x200x170",
+      category: "Samochody",
+    },
+    {
+      photo: "src",
+      name: "Szafa",
+      from: "Lezajsk",
+      where: "Warszawa",
+      price: "500zł",
+      dimensions: "150x50x100",
+      category: "Meble",
+    },
+    {
+      photo: "src",
+      name: "Pies",
+      from: "Wieliczka",
+      where: "Szczecin",
+      price: "150€ ",
+      dimensions: "100x100x100",
+      category: "Zwierzęta",
+    },
+    {
+      photo: "src",
+      name: "Honda Shadow",
+      from: "Bordeaux",
+      where: "Tarnów",
+      price: "200€ ",
+      dimensions: "150x50x100",
+      category: "Motory",
+    },
+  ];
 
   handleChange = (e) => {
     const value = e.target.value;
@@ -32,6 +73,19 @@ class LookFor extends Component {
     } else {
       this.setState({
         where: value,
+      });
+    }
+  };
+
+  handleChangeFormWeight = (e) => {
+    const value = e.target.value;
+    if (e.target.name === "weightFrom") {
+      this.setState({
+        weightFrom: value,
+      });
+    } else {
+      this.setState({
+        weightTo: value,
       });
     }
   };
@@ -51,52 +105,77 @@ class LookFor extends Component {
     const minDate = new Date().toISOString().slice(0, 10);
     let maxDate = minDate.slice(0, 4) * 1 + 1;
     maxDate = maxDate + "-12-31";
+    let shipments = this.lists.map((list) => <Tr key={list.name} {...list} />);
 
     return (
       <>
-        <div className="photo">
-          <img src={truck} alt="truck.png" />
-        </div>
         <div className="LookFor">
-          <p>Tutaj szybko znajdziesz ładunek</p>
-          <div className="inLookFor"></div>
-          <form>
-            <input
-              type="text"
-              id="from"
-              name="from"
-              value={this.state.from}
-              onChange={this.handleChange}
-            />
-            <input
-              type="text"
-              id="where"
-              name="wherename"
-              value={this.state.where}
-              onChange={this.handleChange}
-            />
-            <br />
-            <input
-              type="date"
-              id="date"
-              name="dateStart"
-              value={this.state.dateStart}
-              min={minDate}
-              max={maxDate}
-              onChange={this.handleDateSet}
-            />
-            <input
-              type="date"
-              id="date"
-              name="dateEnd"
-              value={this.state.dateEnd}
-              min={minDate}
-              max={maxDate}
-              onChange={this.handleDateSet}
-            />
-          </form>
-
-          <div className="categories">
+          <section className="aka">
+            <p>
+              Szukaj zleceń i rozwijaj swoją firmę <br /> dzięki naszej giełdzie
+              transportowej!
+            </p>
+          </section>
+          <div className="inLookFor">
+            <form>
+              <input
+                placeholder="Skad?"
+                type="text"
+                id="from"
+                name="from"
+                value={this.state.from}
+                onChange={this.handleChange}
+              />
+              <input
+                placeholder="Dokad?"
+                type="text"
+                id="where"
+                name="wherename"
+                value={this.state.where}
+                onChange={this.handleChange}
+              />
+              <br /> <br />
+              <h4>Waga</h4>
+              <input
+                placeholder="min."
+                type="number"
+                id="weightFrom"
+                name="weightFrom"
+                value={this.state.weightFrom}
+                onChange={this.handleChangeFormWeight}
+              />
+              <input
+                placeholder="max."
+                type="number"
+                id="weightTo"
+                name="weightTo"
+                value={this.state.weightTo}
+                onChange={this.handleChangeFormWeight}
+              />
+              <br /> <br />
+              <h4>Termin zaladunku (od-do)</h4>
+              <input
+                type="date"
+                id="date"
+                name="dateStart"
+                value={this.state.dateStart}
+                min={minDate}
+                max={maxDate}
+                onChange={this.handleDateSet}
+              />
+              <input
+                type="date"
+                id="date"
+                name="dateEnd"
+                value={this.state.dateEnd}
+                min={minDate}
+                max={maxDate}
+                onChange={this.handleDateSet}
+              />
+            </form>
+          </div>
+          <section className="categoriesLookFor">
+            <p>Wybierz kategorie</p>
             <div className="category">
               <img src={furniture} alt="furniture" />
               <p className="categoryName">Meble</p>
@@ -145,7 +224,40 @@ class LookFor extends Component {
               <img src={cargo} alt="cargo" />
               <p className="categoryName">Ładunki</p>
             </div>
-          </div>
+            <div style={{ clear: "both" }}></div>
+          </section>
+        </div>
+        <div className="announcements">
+          <h1>Najnowsze ogłoszenia</h1>
+          <div className="underline"></div>
+          <table className="orders-table">
+            <thead>
+              <tr>
+                <th width="30px">
+                  <h3>Zdjęcie</h3>
+                </th>
+                <th>
+                  <h3>Nazwa</h3>
+                </th>
+                <th>
+                  <h3>Załadunek</h3>
+                </th>
+                <th>
+                  <h3>Dostawa</h3>
+                </th>
+                <th>
+                  <h3>Budżet</h3>
+                </th>
+                <th>
+                  <h3>Wymiary</h3>
+                </th>
+                <th>
+                  <h3>Kategorie</h3>
+                </th>
+              </tr>
+            </thead>
+            <tbody>{shipments}</tbody>
+          </table>
         </div>
       </>
     );

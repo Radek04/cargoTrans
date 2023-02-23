@@ -1,38 +1,39 @@
 .LookFor{
     position: relative;
-    background:  rgba(0, 0, 0, 0.5);
-    width: 98%;
+    width: 95%;
     padding: 1%;
     text-align: center;
-    top:20%;
-    left: 50%;
     font-size: 20px;
-    color: #fff;   
-    transform: translate(-50%, -150%);
-    -ms-transform: translate(-40%, -50%);
-}
-
-.photo{
-    position: relative;
-    margin: auto;
-    text-align: center;
-    z-index: -1;
+    color: black;  
+    height: 900px;
+    margin: 0 auto;
 }
 
 .LookFor p{
-    color:white;
+    color:black;
     text-align: center;
-    font-size: 80px;
+    font-size: 50px;
+}
+
+.aka{
+    background-color: #e9e9e9;
+    width: 97%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    font-size: 20px;
 }
 
 input{
-    z-index: 10;
-    padding: 8px;
-    margin: 10px;
+    padding: 25px;
+   
+    
 }
 
-#from, #where{
-    margin: 40px;
+#from, #where, #weightFrom, #weightTo, #date{
+    margin-left: 10px;
+    margin-right: 10px;
+   
 }
 
 .category{
@@ -51,7 +52,55 @@ input{
     color: black;
 }
 
-.category:hover p{
+.category:hover {
     color: blue;
+    background: #1E90FF;
+}
+
+.categoriesLookFor{
+    width: 100%;
+    height: 400px;
+    background-color: #e9e9e9;
+    margin-top: 100px;
+    color: black; 
+}
+
+
+.underline{
+    background: #1E90FF;
+    height: 4px;
+    margin: 0 auto 20px;
+    width: 800px;
     
+}
+
+.orders-table tbody tr{
+    border: 4px solid rgba(66, 68, 90, 0.34);
+    color: black; 
+    font-weight: 600;
+    box-shadow: 0px 1px 21px 8px rgba(66, 68, 90, 0.34);
+    padding-left: 100px;
+}
+
+.table tr{
+    padding: 100px;
+}
+
+.orders-table{
+    width: 100%;
+    padding-left: 1000px;
+}
+
+
+.announcements{
+    width: 95%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 200px;
+    font-size: 20px;
+}
+
+table td{
+    padding: 45px
 }
