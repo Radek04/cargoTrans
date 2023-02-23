@@ -229,7 +229,7 @@ class LookFor extends Component {
         </div>
         <div className="announcements">
           <h1>Najnowsze ogłoszenia</h1>
-          <div className="underline"></div>
+          <div className="underlineLookFor"></div>
           <table className="orders-table">
             <thead>
               <tr>
