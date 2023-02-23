@@ -24,13 +24,11 @@
     font-size: 20px;
 }
 
-input{
+.LookFor input{
     padding: 25px;
-   
-    
 }
 
-#from, #where, #weightFrom, #weightTo, #date{
+.LookFor #from, #where, #weightFrom, #weightTo, #date{
     margin-left: 10px;
     margin-right: 10px;
    
