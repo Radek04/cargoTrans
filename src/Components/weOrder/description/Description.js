@@ -13,6 +13,7 @@ const Description = (props) => {
         rows="10"
         value={props.description}
         onChange={props.handleDescription}
+        style={props.errors.description ? props.styleInput : null}
       ></textarea>
       {props.errors.description ? (
         <>

@@ -5,7 +5,7 @@ const Needs = (props) => {
   return (
     <section className="container needs">
       <h3>Wymagania</h3>
-      <div className="elevator col-lg-3 col-12">
+      <div className="elevator col-lg-3 col-md-10 col-10">
         <Label for="elevator" content="Wymagana winda?" /> <br />
         <input
           type="checkbox"
@@ -15,7 +15,7 @@ const Needs = (props) => {
           onChange={props.handleElevator}
         />
       </div>
-      <div className="help col-lg-3 col-12">
+      <div className="help col-lg-3 col-md-10 col-10">
         <Label for="help" content="Pomoc przy załadunku?" /> <br />
         <input
           type="checkbox"
@@ -25,7 +25,7 @@ const Needs = (props) => {
           onChange={props.handleHelp}
         />
       </div>
-      <div className="ocp col-lg-3 col-12">
+      <div className="ocp col-lg-3 col-md-10 col-10">
         <Label for="ocp" content="Aktualne OCP" /> <br />
         <input
           type="checkbox"

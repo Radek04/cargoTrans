@@ -1,11 +1,14 @@
 import "../../../styles/AddButton.css";
+import React from "react";
 
-const AddButton = () => {
+const AddButton = (props) => {
   return (
     <section className="container addButton">
-      <a href="#date">
-        <button>Dodaj zlecenie</button>
-      </a>
+      <button
+        onClick={props.allErrors ? () => window.scrollTo(0, 0) : props.message}
+      >
+        Dodaj zlecenie
+      </button>
     </section>
   );
 };

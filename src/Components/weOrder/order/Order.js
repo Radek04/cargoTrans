@@ -12,6 +12,7 @@ import Photos from "../photos/Photos";
 import Contact from "../contactDate/Contact";
 import AddButton from "../addButton/AddButton";
 import "../../../styles/Order.css";
+import { Link } from "react-router-dom";
 
 class Order extends Component {
   state = {
@@ -58,6 +59,7 @@ class Order extends Component {
       name: false,
       tel: false,
     },
+    allErrors: true,
   };
 
   style = {
@@ -67,6 +69,11 @@ class Order extends Component {
   };
   styleInput = {
     borderBottom: "4px solid red",
+  };
+  message = () => {
+    if (window.confirm("Czy napreno chcesz dodać to zlecanie?")) {
+      <Link to="/lookFor" />;
+    }
   };
   handleSubmit = (e) => {
     e.preventDefault();
@@ -88,6 +95,7 @@ class Order extends Component {
           width: true,
           height: true,
         },
+        allErrors: true,
       });
     } else if (
       !this.state.country1 ||
@@ -105,12 +113,14 @@ class Order extends Component {
           zip: true,
           place: true,
         },
+        allErrors: true,
       });
     } else if (!this.state.description) {
       this.setState({
         errors: {
           description: true,
         },
+        allErrors: true,
       });
     } else if (!this.state.name || !this.state.tel) {
       this.setState({
@@ -118,6 +128,7 @@ class Order extends Component {
           name: true,
           tel: true,
         },
+        allErrors: true,
       });
     } else {
       this.setState({
@@ -138,9 +149,11 @@ class Order extends Component {
           name: false,
           tel: false,
         },
+        allErrors: false,
       });
     }
   };
+
   handleItemName = (e) => {
     this.setState({
       itemName: e.target.value,
@@ -171,7 +184,7 @@ class Order extends Component {
       height: e.target.value,
     });
   };
-  handleNeeds = () => {
+  handleNeeds = (e) => {
     this.setState({
       needs: !this.state.needs,
     });
@@ -186,32 +199,32 @@ class Order extends Component {
       currency: e.target.value,
     });
   };
-  handleAdr = () => {
+  handleAdr = (e) => {
     this.setState({
       adr: !this.state.adr,
     });
   };
-  handleASchild = () => {
+  handleASchild = (e) => {
     this.setState({
       aSchild: !this.state.aSchild,
     });
   };
-  handleDed = () => {
+  handleDed = (e) => {
     this.setState({
       ded: !this.state.ded,
     });
   };
-  handleElevator = () => {
+  handleElevator = (e) => {
     this.setState({
       elevator: !this.state.elevator,
     });
   };
-  handleHelp = () => {
+  handleHelp = (e) => {
     this.setState({
       help: !this.state.help,
     });
   };
-  handleOcp = () => {
+  handleOcp = (e) => {
     this.setState({
       ocp: !this.state.ocp,
     });
@@ -415,7 +428,11 @@ class Order extends Component {
               style={this.style}
               styleInput={this.styleInput}
             />
-            <AddButton />
+
+            <AddButton
+              message={this.message}
+              allErrors={this.state.allErrors}
+            />
           </form>
         </article>
       </>

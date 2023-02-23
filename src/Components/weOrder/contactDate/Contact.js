@@ -13,6 +13,7 @@ const Contact = (props) => {
           id="name"
           value={props.name}
           onChange={props.handleName}
+          style={props.errors.name ? props.styleInput : null}
         />
         {props.errors.name ? (
           <>
@@ -29,6 +30,7 @@ const Contact = (props) => {
           id="tel"
           value={props.tel}
           onChange={props.handleTel}
+          style={props.errors.tel ? props.styleInput : null}
         />
         {props.errors.tel ? (
           <>
