@@ -3,7 +3,7 @@ import Label from "./Label";
 
 const Date = (props) => {
   return (
-    <section className="container date" id="date">
+    <section className="container date">
       <h3 className="hed">Dane Przedmiotu</h3>
       <Label for="itemName" content="Nazwa przedmiotu" />*
       <br />

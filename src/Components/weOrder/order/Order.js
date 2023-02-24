@@ -11,6 +11,7 @@ import Description from "../description/Description";
 import Photos from "../photos/Photos";
 import Contact from "../contactDate/Contact";
 import AddButton from "../addButton/AddButton";
+import DataTransfer from "../dataTransfer/DataTransfer";
 import "../../../styles/Order.css";
 import { Link } from "react-router-dom";
 
@@ -86,6 +87,7 @@ class Order extends Component {
       !this.state.height ||
       !this.state.width
     ) {
+      window.scrollTo(0, 0);
       this.setState({
         errors: {
           itemName: true,
@@ -107,6 +109,7 @@ class Order extends Component {
       !this.state.country2 ||
       !this.state.zip2
     ) {
+      window.scrollTo(0, 1000);
       this.setState({
         errors: {
           country: true,
@@ -116,6 +119,7 @@ class Order extends Component {
         allErrors: true,
       });
     } else if (!this.state.description) {
+      window.scrollTo(0, 1500);
       this.setState({
         errors: {
           description: true,
@@ -123,6 +127,7 @@ class Order extends Component {
         allErrors: true,
       });
     } else if (!this.state.name || !this.state.tel) {
+      window.scrollTo(0, 2000);
       this.setState({
         errors: {
           name: true,
@@ -131,6 +136,7 @@ class Order extends Component {
         allErrors: true,
       });
     } else {
+      window.scrollTo(0, 1250);
       this.setState({
         errors: {
           itemName: false,
@@ -153,7 +159,14 @@ class Order extends Component {
       });
     }
   };
-
+  handleError = () => {
+    const edit = document.querySelector(".mainOrder");
+    edit.style.opacity = 1;
+    edit.style.pointerEvents = "auto";
+    this.setState({
+      allErrors: true,
+    });
+  };
   handleItemName = (e) => {
     this.setState({
       itemName: e.target.value,
@@ -428,13 +441,14 @@ class Order extends Component {
               style={this.style}
               styleInput={this.styleInput}
             />
-
-            <AddButton
-              message={this.message}
-              allErrors={this.state.allErrors}
-            />
+            <AddButton />
           </form>
         </article>
+        {this.state.allErrors ? (
+          console.log("tal dzasd")
+        ) : (
+          <DataTransfer click={this.handleError} />
+        )}
       </>
     );
   }
