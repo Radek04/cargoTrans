@@ -5,6 +5,7 @@ import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
 // Put any other imports below so that CSS from your
 // components takes precedence over default styles.
 
